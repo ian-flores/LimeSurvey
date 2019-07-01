@@ -40,9 +40,9 @@ sudo ufw allow 'Nginx Full'
 sudo certbot --nginx
 
 
-sudo mkdir /etc/nginx/ssl
+#sudo mkdir /etc/nginx/ssl
 #sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
-sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
+#sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 
 # Add to website.conf
 # Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
