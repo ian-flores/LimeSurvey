@@ -44,15 +44,6 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt install python-certbot-nginx -y
 sudo certbot --nginx -d "$DOMAIN" -d www."$DOMAIN"
 
-
-#sudo mkdir /etc/nginx/ssl
-#sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
-#sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
-
-# Add to website.conf
-# Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
-#        ssl_dhparam /etc/nginx/ssl/dhparam.pem;
-
 cd /etc/nginx/
 sudo mv nginx.conf nginx.conf.backup
 sudo wget -qO nginx.conf https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/nginx.conf
@@ -116,16 +107,18 @@ echo "Website:    https://www.$DOMAIN"
 echo "Admin:      https://www.$DOMAIN/admin"
 echo "Installer:  https://www.$DOMAIN/index.php?r=installer/welcome"
 echo
-tput setaf 4; echo "Database Name:       $DBNAME"
-tput setaf 4; echo "Database Username:   $USERNAME"
-tput setaf 4; echo "Database Password:   $PASS"
+tput setaf 2; echo "Database Name:       $DBNAME"
+tput setaf 2; echo "Database Username:   $USERNAME"
+tput setaf 2; echo "Database Password:   $PASS"
 echo "--------------------------------"
 tput sgr0
 echo
 echo
 tput setaf 3;  echo "Installation & configuration succesfully finished."
 echo
-echo "twitter: gpmcconnell"
+echo "twitter: @gpmcconnell"
+echo
+echo
 echo "Forked from https://github.com/bajpangosh/High-Traffic-wordpress-server-configuration"
 echo "Twitter @bajpangosh"
 tput sgr0
