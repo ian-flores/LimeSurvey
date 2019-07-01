@@ -2,7 +2,9 @@
 # GET ALL USER INPUT
 tput setaf 2; echo "Domain Name (eg. example.com)?"
 read DOMAIN
-tput setaf 2; echo "Username (eg. database name)?"
+tput setaf 2; echo "Database name?"
+read DBNAME
+tput setaf 2; echo "Database Username"
 read USERNAME
 tput setaf 2; echo "Updating Ubuntu 18..."
 sleep 2;
@@ -31,6 +33,14 @@ sudo wget -q https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/limel
 tput setaf 2; echo "Setting up SSL"
 sleep 2;
 tput sgr0
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe && sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update && sudo apt-get install certbot python-certbot-nginx -y
+sudo ufw allow OpenSSH
+sudo ufw allow 'Nginx Full'
+sudo certbot --nginx
+
+
 sudo mkdir /etc/nginx/ssl
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
 sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
@@ -83,9 +93,9 @@ sudo mysql_secure_installation
 PASS=`pwgen -s 14 1`
 
 sudo mysql -uroot <<MYSQL_SCRIPT
-CREATE DATABASE $USERNAME;
+CREATE DATABASE $DBNAME;
 CREATE USER '$USERNAME'@'localhost' IDENTIFIED BY '$PASS';
-GRANT ALL PRIVILEGES ON $USERNAME.* TO '$USERNAME'@'localhost';
+GRANT ALL PRIVILEGES ON $DBNAME.* TO '$USERNAME'@'localhost';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 
@@ -97,7 +107,7 @@ echo "Website:    https://www.$DOMAIN"
 echo "Admin:      https://www.$DOMAIN/admin"
 echo "Installer:  https://www.$DOMAIN/index.php?r=installer/welcome"
 echo
-tput setaf 4; echo "Database Name:   $USERNAME"
+tput setaf 4; echo "Database Name:       $DBNAME"
 tput setaf 4; echo "Database Username:   $USERNAME"
 tput setaf 4; echo "Database Password:   $PASS"
 echo "--------------------------------"
