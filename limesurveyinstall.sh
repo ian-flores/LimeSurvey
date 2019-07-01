@@ -34,10 +34,11 @@ sleep 2;
 tput sgr0
 sudo apt-get install software-properties-common
 sudo add-apt-repository universe && sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update && sudo apt-get install certbot python-certbot-nginx -y
 sudo ufw allow OpenSSH
 sudo ufw allow 'Nginx Full'
-sudo certbot --nginx
+sudo certbot --nginx -d "$DOMAIN" -d www."$DOMAIN"
+sudo apt-get update && sudo apt-get install certbot python-certbot-nginx -y
+
 
 
 #sudo mkdir /etc/nginx/ssl
@@ -48,9 +49,9 @@ sudo certbot --nginx
 # Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
 #        ssl_dhparam /etc/nginx/ssl/dhparam.pem;
 
-#cd /etc/nginx/
-#sudo mv nginx.conf nginx.conf.backup
-#sudo wget -qO nginx.conf https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/nginx.conf
+cd /etc/nginx/
+sudo mv nginx.conf nginx.conf.backup
+sudo wget -qO nginx.conf https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/nginx.conf
 sudo mkdir -p /var/www/"$DOMAIN"/public
 cd /var/www/"$DOMAIN/public"
 cd ~
