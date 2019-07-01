@@ -45,9 +45,11 @@ tput setaf 2; echo "Downloading LimeSurvey 3.17.6+190624 (06/24/19)...."
 sleep 2;
 tput sgr0
 sudo wget -q https://github.com/LimeSurvey/LimeSurvey/archive/3.17.6+190624.zip
-sudo unzip LimeSurvey-3.17.6-190624.zip
-sudo mv limesurvey/* /var/www/"$DOMAIN"/public/
-sudo rm -rf limesurvey LimeSurvey-3.17.6-190624.zip
+sudo unzip 3.17.6+190624.zip
+shopt -s dotglob
+sudo mv LimeSurvey-3.17.6-190624/* /var/www/"$DOMAIN"/public/
+sudo rm -rf LimeSurvey-3.17.6-190624
+sudo rm -rf 3.17.6+190624.zip
 
 tput setaf 2; echo "Nginx server installation completed.."
 sleep 2;
