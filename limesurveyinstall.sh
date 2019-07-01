@@ -12,6 +12,12 @@ tput sgr0
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 
+tput setaf 2; echo "Setting up Firewall"
+sleep 2;
+tput sgr0
+sudo ufw allow OpenSSH
+sudo ufw allow 'Nginx Full'
+
 tput setaf 2; echo "Installing Nginx..."
 sleep 2;
 tput sgr0
@@ -29,16 +35,14 @@ sudo mkdir /etc/nginx/limelemp
 cd /etc/nginx/limelemp
 sudo wget -q https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/limelemp/general.conf
 sudo wget -q https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/limelemp/php_fastcgi.conf
+sudo systemctl restart nginx.service
+
 tput setaf 2; echo "Setting up SSL"
 sleep 2;
 tput sgr0
-sudo apt-get install software-properties-common
-sudo add-apt-repository universe && sudo add-apt-repository ppa:certbot/certbot
-sudo ufw allow OpenSSH
-sudo ufw allow 'Nginx Full'
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-nginx -y
 sudo certbot --nginx -d "$DOMAIN" -d www."$DOMAIN"
-sudo apt-get update && sudo apt-get install certbot python-certbot-nginx -y
-
 
 
 #sudo mkdir /etc/nginx/ssl
