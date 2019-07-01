@@ -20,11 +20,11 @@ sudo apt-get install nginx zip unzip pwgen -y
 tput setaf 2; echo "Setting Up NGINX..."
 sleep 2;
 tput sgr0
-# cd /etc/nginx/sites-available/
-# sudo wget -qO "$DOMAIN" https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/sites-available/example.com.conf
-# sudo sed -i -e "s/example.com/$DOMAIN/" "$DOMAIN"
-# sudo sed -i -e "s/www.example.com/www.$DOMAIN/" "$DOMAIN"
-# sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
+cd /etc/nginx/sites-available/
+sudo wget -qO "$DOMAIN" https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/sites-available/example.com.conf
+sudo sed -i -e "s/example.com/$DOMAIN/" "$DOMAIN"
+sudo sed -i -e "s/www.example.com/www.$DOMAIN/" "$DOMAIN"
+sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
 sudo mkdir /etc/nginx/limelemp
 cd /etc/nginx/limelemp
 sudo wget -q https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/limelemp/general.conf
