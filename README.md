@@ -20,3 +20,31 @@ Type in your email address for Let's Encrypt renewal and security notices.
 Accept Let's Encrypt Terms of Service by Typing A.
 
 ![Type A hit Enter](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/04%20-%20Agree.PNG?raw=true "Type A hit Enter")
+
+Share/Don't Share your Email with Let's Encrypt.
+
+![Type Y or N](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/05%20-%20No.PNG?raw=true "Type Y or N")
+
+Force all traffic through SSL.
+
+![Type 2 hit Enter](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/06%20-%20Force%20SSL.PNG?raw=true "Type 2 hit Enter")
+
+Diffie-Hellman Algorithm will take a few minutes to run. Be patient.
+
+![Diffie-Hellman](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/07%20-%20Diffie-Hellman.PNG?raw=true "Diffie-Hellman")
+
+MariaDB Install - Enter Password.
+
+![MariaDB Password](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/08%20-%20MariaDB%20Root%20PAssword.PNG?raw=true "MariaDB Password")
+
+MariaDB Install - Change Password - Type N.
+
+![Type N](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/09%20-%20Mariadb%20Root%20Password%20No.PNG?raw=true "Type N")
+
+MariaDB Install - Remove Anonymous Users - Type Y.
+
+![Remove Anonymous Users - Type Y](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/10%20-%20Mariadb%20Remove%20Anon%20Users.PNG?raw=true "Remove Anonymous Users - Type Y")
+
+MariaDB Install - Disallow Root Login Remotely - Type Y.
+
+![Disallow Root Login Remotely - Type Y](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/11%20-%20Mariadb%20Root%20Remote%20Login.PNG?raw=true "Disallow Root Login Remotely - Type Y")
