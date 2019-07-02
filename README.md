@@ -48,3 +48,15 @@ MariaDB Install - Remove Anonymous Users - Type Y.
 MariaDB Install - Disallow Root Login Remotely - Type Y.
 
 ![Disallow Root Login Remotely - Type Y](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/11%20-%20Mariadb%20Root%20Remote%20Login.PNG?raw=true "Disallow Root Login Remotely - Type Y")
+
+MariaDB Install - Remove Test Database - Type Y.
+
+![Remove Test Database - Type Y](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/12%20-%20Mariadb%20Test%20Database.PNG?raw=true "Remove Test Database - Type Y")
+
+MariaDB Install - Reload Privileges - Type Y.
+
+![Reload Privileges - Type Y](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/13%20-%20Mariadb%20Reload%20Privilege%20Table.PNG?raw=true "Reload Privileges - Type Y")
+
+Server Setup Complete - Take note of Database information to properly setup LimeSurvey.
+
+![Server Setup Complete](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/14%20-%20Installation%20Complete.PNG?raw=true "Server Setup Complete")
