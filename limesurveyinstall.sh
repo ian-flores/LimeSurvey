@@ -18,12 +18,6 @@ tput sgr0
 sudo ufw allow OpenSSH
 sudo ufw allow 'Nginx Full'
 
-tput setaf 2; echo "Securing with Diffie-Hellman Algorithm - This will take a long time..."
-sleep 2;
-tput sgr0
-sudo mkdir /etc/nginx/ssl
-openssl dhparam -out /etc/nginx/ssl/dhparam.pem 4096
-
 tput setaf 2; echo "Installing Nginx..."
 sleep 2;
 tput sgr0
@@ -49,6 +43,13 @@ tput sgr0
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt install python-certbot-nginx -y
 sudo certbot --nginx -d "$DOMAIN" -d www."$DOMAIN"
+
+tput setaf 2; echo "Securing with Diffie-Hellman Algorithm - This will take a long time..."
+sleep 2;
+tput sgr0
+sudo mkdir /etc/nginx/ssl
+openssl dhparam -out /etc/nginx/ssl/dhparam.pem 4096
+sed -i '/#ssl_dhparam/s/^#//g' /etc/nginx/sites-available/"$DOMAIN"
 
 cd /etc/nginx/
 sudo mv nginx.conf nginx.conf.backup
