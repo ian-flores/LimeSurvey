@@ -31,7 +31,7 @@ Share/Don't Share your Email with Let's Encrypt.
 
 ![Type Y or N](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/05%20-%20No.PNG?raw=true "Type Y or N")
 
-Force all traffic through SSL.
+Force all traffic through SSL - Select 2 and hit enter.
 
 ![Type 2 hit Enter](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/06%20-%20Force%20SSL.PNG?raw=true "Type 2 hit Enter")
 
