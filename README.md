@@ -62,6 +62,15 @@ Server Setup Complete - Take note of Database information to properly setup Lime
 ![Server Setup Complete](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/14%20-%20Installation%20Complete.PNG?raw=true "Server Setup Complete")
 
 
-LimeSurvey Setup - Take note of Database information to properly setup LimeSurvey.
+LimeSurvey Setup - Check all modules are properly installed.
 
 ![LimeSurvey Setup](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/16%20-%20Pre-Install%20Check.PNG?raw=true "LimeSurvey Setup")
+
+LimeSurvey Setup - Database Properties.
+
+![LimeSurvey Setup - Database Properties](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/17%20-%20Setup%20Database.PNG?raw=true "LimeSurvey Setup - Database Properties")
+
+
+LimeSurvey Setup - Administrator Setup.
+
+![LimeSurvey Setup - Administrator Setup](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/19%20-%20Setup%20Admin%20Logins%20and%20Site%20Settings.PNG?raw=true "LimeSurvey Setup - Administrator Setup")
