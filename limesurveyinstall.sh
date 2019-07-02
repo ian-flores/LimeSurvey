@@ -18,6 +18,12 @@ tput sgr0
 sudo ufw allow OpenSSH
 sudo ufw allow 'Nginx Full'
 
+tput setaf 2; echo "Securing with Diffie-Hellman Algorithm - This will take a long time..."
+sleep 2;
+tput sgr0
+sudo mkdir /etc/nginx/ssl
+openssl dhparam -out /etc/nginx/ssl/dhparam.pem 4096
+
 tput setaf 2; echo "Installing Nginx..."
 sleep 2;
 tput sgr0
