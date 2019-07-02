@@ -79,7 +79,7 @@ tput setaf 2; echo "Installing PHP-7.3 and Other Modules"
 sleep 2;
 tput sgr0
 sudo apt install php7.3 php7.3-fpm -y
-sudo apt-get -y install php7.3-intl php7.3-curl php7.3-gd php7.3-imap php7.3-readline php7.3-common php7.3-recode php7.3-mysql php7.3-cli php7.3-curl php7.3-mbstring php7.3-bcmath php7.3-mysql php7.3-opcache php7.3-zip php7.3-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack  php7.3-soap
+sudo apt-get -y install php7.3-intl php7.3-curl php7.3-gd php7.3-imap php7.3-readline php7.3-common php7.3-recode php7.3-mysql php7.3-cli php7.3-curl php7.3-mbstring php7.3-bcmath php7.3-mysql php7.3-opcache php7.3-zip php7.3-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack php-ldap php7.3-soap
 tput setaf 2; echo "Php.ini Updates"
 sleep 2;
 tput sgr0
