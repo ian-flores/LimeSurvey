@@ -75,6 +75,6 @@ LimeSurvey Setup - Administrator Setup.
 ![LimeSurvey Setup - Administrator Setup](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/19%20-%20Setup%20Admin%20Logins%20and%20Site%20Settings.PNG?raw=true "LimeSurvey Setup - Administrator Setup")
 
 
-LimeSurvey Server Complete!
+**LimeSurvey Server Complete!**
 
 ![LimeSurvey Server Complete!](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/20%20-%20Welcome.PNG?raw=true "LimeSurvey Server Complete!")
