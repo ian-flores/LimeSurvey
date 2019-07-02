@@ -1,7 +1,13 @@
 # LimeSurvey
-LimeSurvey LEMP Install
+A script to automate the installation of LimeSurvey on an Ubuntu 18.04 LEMP stack, and adds an SSL Cert via Let's Encrypt. What this script installs:
 
-To install make sure your domain is pointed at a fresh instance of Ubuntu 18.04. Login with sudo access and enter:
+- Nginx
+- PHP 7.3
+- MariaDB 10.1.4
+- Let's Encrypt Certbot
+- LimeSurvey 3.17.6+190624
+
+To install make sure your domain is pointed at a fresh instance of Ubuntu 18.04 prior to starting. Login with sudo rights and enter:
 
 `wget -qO lime https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/limesurveyinstall.sh && sudo bash lime`
 
