@@ -60,3 +60,8 @@ MariaDB Install - Reload Privileges - Type Y.
 Server Setup Complete - Take note of Database information to properly setup LimeSurvey.
 
 ![Server Setup Complete](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/14%20-%20Installation%20Complete.PNG?raw=true "Server Setup Complete")
+
+
+LimeSurvey Setup - Take note of Database information to properly setup LimeSurvey.
+
+![LimeSurvey Setup](https://raw.githubusercontent.com/Gordon55M/LimeSurvey/master/tutorial-images/16%20-%20Pre-Install%20Check.PNG?raw=true "LimeSurvey Setup")
