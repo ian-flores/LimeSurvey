@@ -12,16 +12,16 @@ tput sgr0
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 
+tput setaf 2; echo "Installing Nginx..."
+sleep 2;
+tput sgr0
+sudo apt-get install nginx zip unzip pwgen -y
+
 tput setaf 2; echo "Setting up Firewall"
 sleep 2;
 tput sgr0
 sudo ufw allow OpenSSH
 sudo ufw allow 'Nginx Full'
-
-tput setaf 2; echo "Installing Nginx..."
-sleep 2;
-tput sgr0
-sudo apt-get install nginx zip unzip pwgen -y
 
 tput setaf 2; echo "Setting Up NGINX..."
 sleep 2;
@@ -58,15 +58,15 @@ sudo mkdir -p /var/www/"$DOMAIN"/public
 cd /var/www/"$DOMAIN/public"
 cd ~
 
-tput setaf 2; echo "Downloading LimeSurvey 3.17.6+190624 (06/24/19)...."
+tput setaf 2; echo "Downloading LimeSurvey 4.3.1+200623 ...."
 sleep 2;
 tput sgr0
-sudo wget -q https://github.com/LimeSurvey/LimeSurvey/archive/3.17.6+190624.zip
-sudo unzip 3.17.6+190624.zip
+sudo wget -q https://github.com/LimeSurvey/LimeSurvey/archive/4.3.1+200623.zip
+sudo unzip 4.3.1+200623.zip
 shopt -s dotglob
-sudo mv LimeSurvey-3.17.6-190624/* /var/www/"$DOMAIN"/public/
-sudo rm -rf LimeSurvey-3.17.6-190624
-sudo rm -rf 3.17.6+190624.zip
+sudo mv LimeSurvey-4.3.1-200623/* /var/www/"$DOMAIN"/public/
+sudo rm -rf LimeSurvey-4.3.1-200623
+sudo rm -rf 4.3.1+200623.zip
 
 tput setaf 2; echo "Nginx server installation completed.."
 sleep 2;
@@ -79,7 +79,7 @@ tput setaf 2; echo "Installing PHP-7.3 and Other Modules"
 sleep 2;
 tput sgr0
 sudo apt install php7.3 php7.3-fpm -y
-sudo apt-get -y install php7.3-intl php7.3-curl php7.3-gd php7.3-imap php7.3-readline php7.3-common php7.3-recode php7.3-mysql php7.3-cli php7.3-curl php7.3-mbstring php7.3-bcmath php7.3-mysql php7.3-opcache php7.3-zip php7.3-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack php-ldap php7.3-soap
+sudo apt-get -y install php7.3-intl php7.3-curl php7.3-gd php7.3-imap php7.3-readline php7.3-common php7.3-recode php7.3-mysql php7.3-cli php7.3-curl php7.3-mbstring php7.3-bcmath php7.3-mysql php7.3-opcache php7.3-zip php7.3-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack php-ldap php7.3-soap php7.3-ldap
 tput setaf 2; echo "Php.ini Updates"
 sleep 2;
 tput sgr0
@@ -123,9 +123,6 @@ echo
 echo
 tput setaf 3;  echo "Installation & configuration succesfully finished."
 echo
-echo "twitter: @gpmcconnell"
 echo
-echo
-echo "Forked from https://github.com/bajpangosh/High-Traffic-wordpress-server-configuration"
-echo "Twitter @bajpangosh"
+echo "Forked from https://github.com/Gordon55M/LimeSurvey"
 tput sgr0
